@@ -281,24 +281,37 @@
     "points": 0
     },
     {
-    "name": "Calendar Test - Key Dates",
+    "name": "Calendar Test",
     "setup": "javac Calendar.java",
-    "run": "java Calendar",
-    "input": "2021",
-    "comparison": "exact",
+    "run": "java Calendar 2021",
+    "input": "",
+    "output": "3/1/2021 Sunday",
+    "comparison": "included",
     "timeout": 15,
-    "points": 25,
-    "output": [
-        "1/1/2021",
-        "3/1/2021 Sunday",        
-        "1/3/2021",         
-        "31/3/2021",        
-        "1/4/2021",         
-        "30/4/2021",
-        "26/12/2021 Sunday",
-        "31/12/2021"        
-    ]
+    "points": 10
+    },
+    {
+    "name": "Calendar Test",
+    "setup": "javac Calendar.java",
+    "run": "java Calendar 2024",
+    "input": "",
+    "output": "29/2/2024",
+    "comparison": "included",
+    "timeout": 15,
+    "points": 10
+    },
+    {
+    "name": "Calendar Test",
+    "setup": "javac Calendar.java",
+    "run": "java Calendar 2020",
+    "input": "",
+    "output": "1/3/2020 Sunday",
+    "comparison": "included",
+    "timeout": 15,
+    "points": 10
     }
+    
+    
 
     ]
 }
