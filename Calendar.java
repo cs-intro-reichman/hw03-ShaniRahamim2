@@ -11,15 +11,11 @@ public class Calendar {
         int givenYear = Integer.parseInt(args[0]);
 
 	 	while (year < givenYear) {	
+            advance();
             year++; 
 	 	}
-            advance();
-        }
-	
-	 private static void advance() {
-		 
-			for (month = 1; month <= 12; month++){  			
-				int countDays = nDaysInMonth(month, year); 		
+        for (month = 1; month <= 12; month++){  			
+			int countDays = nDaysInMonth(month, year); 		
 				for (dayOfMonth = 1; dayOfMonth <= countDays; dayOfMonth++){
 					if(dayOfWeek == 1) {
 						sundays++; 
@@ -27,7 +23,22 @@ public class Calendar {
 					}
 					else {
 						System.out.println( dayOfMonth + "/" + month + "/" + year );
-						}
+					}
+					if ( dayOfWeek == 7) {
+						dayOfWeek = 0; 
+					}
+					dayOfWeek++; 
+					
+				}
+			}
+        }
+	
+	 private static void advance() {
+		 
+			for (month = 1; month <= 12; month++){  			
+				int countDays = nDaysInMonth(month, year); 		
+				for (dayOfMonth = 1; dayOfMonth <= countDays; dayOfMonth++){
+					
 					if ( dayOfWeek == 7) {
 						dayOfWeek = 0; 
 					}
